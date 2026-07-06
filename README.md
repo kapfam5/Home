@@ -1,6 +1,12 @@
-# KapFam5 Central Dashboard v2.1
+# KapFam5 Central Dashboard v2.3
 
-Data-driven static dashboard for `kapfam5/Investments` and Netlify.
+Data-driven static dashboard for `kapfam5.com`, published from the `kapfam5-home` Netlify project.
+
+## v2.3 updates
+
+- Added explicit Netlify `_redirects` rules so the Netlify app subdomain and `www.kapfam5.com` normalize to `https://kapfam5.com`.
+- Added canonical metadata across dashboard pages for the custom domain.
+- Added baseline security/cache headers for the static dashboard, assets, and JSON data.
 
 ## v2.1 updates
 
