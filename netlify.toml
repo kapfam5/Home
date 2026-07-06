@@ -1,0 +1,19 @@
+[build]
+  publish = "."
+
+[[redirects]]
+  from = "https://kapfam5-home.netlify.app/*"
+  to = "https://kapfam5.com/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://www.kapfam5.com/*"
+  to = "https://kapfam5.com/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
