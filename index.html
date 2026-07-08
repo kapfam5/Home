@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta
+      name="description"
+      content="Kapfam5 central dashboard for family links, planning, and shared resources."
+    >
+    <title>Kapfam5 Central Dashboard</title>
+    <style>
+      :root {
+        color-scheme: light;
+        --ink: #24221f;
+        --muted: #6e675f;
+        --paper: #f8f5ed;
+        --panel: #fffdf7;
+        --line: #d8d0c3;
+        --accent: #2f6f73;
+        --accent-deep: #244f52;
+        --gold: #b78532;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        min-height: 100vh;
+        color: var(--ink);
+        background:
+          radial-gradient(circle at 12% 18%, rgba(47, 111, 115, 0.12), transparent 28rem),
+          linear-gradient(135deg, #f8f5ed 0%, #ece4d6 100%);
+        font-family: Georgia, "Times New Roman", serif;
+      }
+
+      main {
+        width: min(1120px, calc(100% - 32px));
+        margin: 0 auto;
+        padding: 56px 0;
+      }
+
+      .shell {
+        display: grid;
+        grid-template-columns: minmax(0, 1.05fr) minmax(280px, 0.95fr);
+        gap: 32px;
+        align-items: stretch;
+      }
+
+      .intro {
+        min-height: 560px;
+        padding: 48px;
+        border: 1px solid var(--line);
+        background: rgba(255, 253, 247, 0.78);
+        box-shadow: 0 24px 70px rgba(55, 45, 32, 0.11);
+      }
+
+      .mark {
+        display: inline-grid;
+        place-items: center;
+        width: 76px;
+        height: 76px;
+        margin-bottom: 56px;
+        border: 1px solid var(--accent);
+        color: var(--accent-deep);
+        font-size: 0.86rem;
+        font-weight: 700;
+        letter-spacing: 0.14em;
+      }
+
+      h1 {
+        max-width: 680px;
+        margin: 0;
+        font-size: clamp(3.25rem, 8vw, 7.4rem);
+        line-height: 0.9;
+        letter-spacing: 0;
+      }
+
+      .lede {
+        max-width: 34rem;
+        margin: 32px 0 0;
+        color: var(--muted);
+        font-size: clamp(1.1rem, 2vw, 1.38rem);
+        line-height: 1.55;
+      }
+
+      .directory {
+        display: grid;
+        gap: 16px;
+      }
+
+      .tile {
+        display: block;
+        min-height: 176px;
+        padding: 28px;
+        border: 1px solid var(--line);
+        color: inherit;
+        background: var(--panel);
+        text-decoration: none;
+        transition: transform 180ms ease, border-color 180ms ease, box-shadow 180ms ease;
+      }
+
+      .tile:hover,
+      .tile:focus-visible {
+        border-color: var(--accent);
+        box-shadow: 0 18px 44px rgba(47, 111, 115, 0.14);
+        transform: translateY(-3px);
+        outline: none;
+      }
+
+      .tile span {
+        display: block;
+        color: var(--gold);
+        font-size: 0.78rem;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+      }
+
+      .tile strong {
+        display: block;
+        margin-top: 44px;
+        font-size: clamp(1.8rem, 4vw, 3rem);
+        line-height: 0.96;
+        font-weight: 500;
+      }
+
+      .tile p {
+        margin: 16px 0 0;
+        color: var(--muted);
+        font: 1rem/1.45 "Trebuchet MS", Verdana, sans-serif;
+      }
+
+      @media (max-width: 800px) {
+        main {
+          width: min(100% - 24px, 640px);
+          padding: 24px 0;
+        }
+
+        .shell {
+          grid-template-columns: 1fr;
+        }
+
+        .intro {
+          min-height: auto;
+          padding: 32px 24px;
+        }
+
+        .mark {
+          margin-bottom: 40px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <section class="shell" aria-label="Kapfam5 dashboard">
+        <div class="intro">
+          <div class="mark" aria-hidden="true">K5</div>
+          <h1>Kapfam5 central dashboard</h1>
+          <p class="lede">
+            A simple home base for family planning, shared references, and the places the household checks most often.
+          </p>
+        </div>
+
+        <nav class="directory" aria-label="Dashboard links">
+          <a class="tile" href="#investments">
+            <span>01</span>
+            <strong>Investments</strong>
+            <p>Track accounts, decisions, and financial references in one place.</p>
+          </a>
+          <a class="tile" href="#travel">
+            <span>02</span>
+            <strong>Travel</strong>
+            <p>Keep plans, dates, and destination notes close at hand.</p>
+          </a>
+          <a class="tile" href="#cobernatory-dynasty">
+            <span>03</span>
+            <strong>Cobernatory Dynasty</strong>
+            <p>Collect the family history, stories, and ongoing projects.</p>
+          </a>
+        </nav>
+      </section>
+    </main>
+  </body>
+</html>
